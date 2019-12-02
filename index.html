@@ -15,6 +15,18 @@
         <!-- GIF Images -->
       </div>
     </div>
-    <script></script>
+    <script src="gitignored_file_with_mitchells_key.js"></script>
+    <script>
+      const q = "cats";
+      const path = `http://api.giphy.com/v1/gifs/search?api_key=${apikey}&q=${q}`;
+
+      fetch(path)
+        .then(function(res) {
+          return res.json();
+        })
+        .then(function(json) {
+          console.log(json);
+        });
+    </script>
   </body>
 </html>
